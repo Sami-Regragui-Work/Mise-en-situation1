@@ -1,0 +1,315 @@
+:root {
+    /* font-family */
+    --ff-primary: "Work Sans", sans-serif;
+    --ff-fallback: "Noto Sans", sans-serif;
+
+    /* font-weight */
+    --fw-regular-400: 400;
+    --fw-medium-500: 500;
+    --fw-bold-700: 700;
+    --fw-black-900: 900;
+
+    /* sizes */
+    --fs-dl-48: 4.8rem;
+    --fs-d-36: 3.6rem;
+    --fs-h1-22: 2.2rem;
+    --fs-h2-18: 1.8rem;
+    --fs-bl-16: 1.6rem;
+    --fs-b-14: 1.4rem;
+    --fs-s-12: 1.2rem;
+
+    --lh-12: 1.2;
+    --lh-15: 1.5;
+
+    --ls-33: -0.033em;
+    --ls-15: -0.015em;
+    --lsn: normal;
+
+    --max-width: 96rem;
+    --header-padding: 0 4rem;
+    --section-padding: 2rem 4rem;
+    --border-radius: 1.2rem;
+
+    --gap-xs-4: 0.4rem;
+    --gap-s-8: 0.8rem;
+    --gap-m-16: 1.6rem;
+    --gap-l-24: 2.4rem;
+    --gap-xl-32: 3.2rem;
+    --gap-xxl-40: 4rem;
+
+    /* colors */
+    --text-primary-color: #121416;
+    --text-secondary-color: #6a7281;
+    --bg-color: #FFFFFF;
+    --border-color: #f1f2f4;
+
+    --btn-primary-color: #b2c5e5;
+    --text-accent: #121416;
+
+    
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: var(--ff-primary), var(--ff-fallback);
+}
+
+/* elements global styling */
+h1 {
+    font-size: var(--fs-h1-22);
+}
+
+h2 {
+    font-size: var(--fs-h2-18);
+}
+
+h3 {
+    font-size: var(--fs-bl-16);
+}
+
+h1, h2 {
+    line-height: var(--lh-12);
+    letter-spacing: var(--ls-15);
+    font-weight: var(--fw-bold-700);
+}
+
+p {
+    font-size: var(--fs-bl-16);
+    font-weight: var(--fw-regular-400);
+    line-height: var(--lh-15);
+    letter-spacing: var(--lsn);
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > * {
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+header {
+    height: 6rem;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.2rem 4rem;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-size: var(--fs-b-14);
+    font-weight: var(--fw-medium-500);
+}
+
+.header__logo svg {
+    height: 1.6rem;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: var(--gap-m-16);
+}
+
+.header__container a {
+    color: var(--text-accent);
+}
+
+.header__container nav ul{
+    gap: var(--gap-xl-32);
+    /* align-items: center; */
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xl-32);
+}
+
+.btn {
+    display: inline-flex;
+    height: 4.8rem;
+    min-width: fit-content;
+    padding: 2rem 2.4rem;
+    border-radius: var(--border-radius);
+    background-color: var(--btn-primary-color);
+    justify-content: center;
+    align-items: center;
+    color: var(--text-accent);
+    font-weight: var(--fw-bold-700);
+    font-size: var(--fs-bl-16);
+}
+
+.btn--smaller {
+    height: 4rem;
+    /* width: 13.1rem; */
+    padding: 1.6rem 2rem;
+    font-size: var(--fs-b-14);
+}
+
+section {
+    padding: var(--section-padding);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+#hero-section {
+    position: relative;
+    background: linear-gradient(0deg, var(--text-accent) 0%, transparent), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYKFRxdYXCyZt_R25M0l0iIeR5scEOFHZlpc8u9OgTxrFXOc3-Pao9oAmpyvRDmWm12RBnkIPmO5cO2VwlIcoxfm77ZkIxQqOTxF66kOCh4g8oq1D4Vp26xNa0Xqliv8jsOsfBUCDtH8doz2Rq-AUG4kMMh88mxlR9E6xCavVU3rcf0jU5VF3YYVThsHTLtcuLwnZXh4_QIeX-9hPy6lTJTcz0xLX3-WITTdYMESn1XfVbay2yEy4r1p-CP_5UdkMlG2cjR57_ueY");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 48rem;
+    width: 90rem;
+    min-width: 80%;
+    border-radius: var(--border-radius);
+    margin: 4rem;
+    color: var(--bg-color);
+    gap: 0.8rem;
+}
+
+#hero-section h1 {
+    font-size: var(--fs-dl-48);
+    font-weight: var(--fw-black-900);
+    letter-spacing: var(--ls-33);
+}
+
+#hero-section .btn {
+    margin-top: var(--gap-xxl-40);
+}
+
+/* #hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(0deg, var(--text-accent) 0%, transparent);
+    border-radius: var(--border-radius);
+    pointer-events: none;
+
+} */
+
+section:not(#hero-sction) h2 {
+    font-size: var(--fs-h1-22);
+}
+
+#about-me {
+    color: var(--text-primary-color);
+    gap: var(--gap-m-16);
+    
+}
+
+#services {
+    gap: var(--gap-m-16);
+}
+
+#services p {
+    color: var(--text-secondary-color);
+}
+
+.services__center {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xl-32);
+}
+
+.services__center__element {
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap-reverse; */
+}
+
+.services__center__element .element__center {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s-8);
+    flex-wrap: wrap;
+}
+
+.services__center__element .element__right {
+    /* width: 32rem; */
+    height: 17.1rem;
+    border-radius: var(--border-radius);
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.services__center__element .element__right img {
+    /* height: 17.1rem; */
+    object-fit: cover;
+    /* width: 32rem; */
+    width: 100%;
+    height: 100%;
+    
+    border-radius: var(--border-radius);
+}
+
+footer {
+    color: var(--text-secondary-color);
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-m-16);
+}
+
+footer a {
+    color: var(--text-secondary-color);
+    font-size: var(--fs-bl-16);
+    font-weight: var(--fw-regular-400);
+}
+
+.footer__top ul{
+    /* display: flex; */
+    justify-content: space-around;
+    /* width: 100%; */
+}
+
+.footer__top {
+    width: 100%;
+}
+
+
+
+
+
+
+
